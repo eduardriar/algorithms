@@ -12,5 +12,25 @@ export function duplicateChars(chars: number[] | string[]) {
     return !!Object.values(duplicated).find(number => number > 1)
 }
 
-/** * @param {number[]} nums * @return {boolean} */
-//function containsDuplicate(nums: number[]) { const seen = new Set(); for (const num of nums) { if (seen.has(num)) return true; seen.add(num); } return false; }
+// ============================================
+// OPTIMAL SOLUTION — All tests passed (8/8)
+// ============================================
+//
+// Use a Set instead of counting frequencies.
+// If the element is already in the Set, there's
+// a duplicate — return immediately. No need to
+// count or iterate a second time.
+//
+// function duplicateCharsAI(chars: number[] | string[]): boolean {
+//     const seen = new Set<number | string>();
+
+//     for (const char of chars) {
+//         if (seen.has(char)) return true;
+//         seen.add(char);
+//     }
+
+//     return false;
+// }
+//
+// Time: O(n) | Space: O(n)
+// ============================================

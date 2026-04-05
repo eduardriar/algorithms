@@ -5,7 +5,7 @@ describe('canConstruct', () => {
     expect(canConstruct('hello', 'helloworld')).toBe(true);
   });
 
-  test.only('returns false when magazine lacks a character', () => {
+  test('returns false when magazine lacks a character', () => {
     expect(canConstruct('abc', 'ab')).toBe(false);
   });
 
@@ -13,7 +13,7 @@ describe('canConstruct', () => {
     expect(canConstruct('aab', 'ab')).toBe(false);
   });
 
-  test('returns true when magazine has extra characters', () => {
+  test.only('returns true when magazine has extra characters', () => {
     expect(canConstruct('ab', 'aabbc')).toBe(true);
   });
 

@@ -39,11 +39,13 @@ export function canConstruct(note: string, magazine: string): boolean {
     for (const letter of magazine) {
         freq.set(letter, (freq.get(letter) ?? 0) + 1);
     }
+    
+    console.log('>>> NM', note, magazine)
 
     for (const letter of note) {
         const count = freq.get(letter) ?? 0;
-        console.log(note, magazine)
-        console.log(freq)
+        console.log('>>> freq', freq)
+        console.log('>>> count', count)
         if (count === 0) return false;
         freq.set(letter, count - 1);
     }
